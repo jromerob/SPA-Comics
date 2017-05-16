@@ -1,0 +1,23 @@
+<h1> {{ heroe.nombre }}<small>{{ heroe.fecha }}</small></h1>
+<hr/>
+<div class="row">
+  <div class="col-md-4">
+
+    <img class="img-fluid" [alt]="heroe.nombre" [src]="heroe.img">
+    <br>
+    <br>
+    <a class="btn btn-outline-danger btn-block" href="heroes">Volver...</a>
+  </div>
+  <div class="col-md-8">
+    <h2> {{ heroe.nombre }}</h2>
+    <hr/>
+    <p>{{ heroe.bio }}</p>
+    <div>
+      <p>{{ heroe.casa }}</p>
+      <img *ngIf="heroe.casa=='Marvel'" src="assets/img/MARVEL.png" [alt]="heroe.casa">
+      <img *ngIf="heroe.casa=='DC'" src="assets/img/DC.png" [alt]="heroe.casa">
+    </div>
+
+
+  </div>
+</div>
