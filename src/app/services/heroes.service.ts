@@ -67,5 +67,21 @@ export class HeroesService {
     return this.heroes[idx];
   }
 
+  searchHeroes(termino: string): Heroe[] {
+
+    console.log("Buscar por  : " + termino);
+    let heroesArr: Heroe[] = [];
+    termino = termino.toLowerCase();
+
+    for (let heroe of this.heroes) {
+      if (heroe.nombre.toLowerCase().indexOf(termino) >= 0) {
+        heroesArr.push(heroe);
+      }
+    }
+    console.log("Resultado busqueda : " + heroesArr);
+    return heroesArr;
+
+  }
+
 
 }
