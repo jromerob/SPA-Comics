@@ -1,7 +1,15 @@
 <h1>Buscando <small>{{termino}}</small></h1>
 
-  <div class='card-columns'>
-    <div class='card animated fadein fast' *ngFor='let heroe of heroes; let i=index'>
+
+  <div class="row" *ngIf="heroes.length==0">
+    <div class="col-xs-12 alert alert-warning" role="alert">
+      No encontrado nada por <strong>{{termino}}</strong>.
+      Pruebe otra búsqueda.
+</div>
+  </div>
+
+  <div class='card-columns' *ngIf="heroes.length > 0">
+    <div class='card animated fadeIn fast' *ngFor='let heroe of heroes; let i=index'>
     <img class='card-img-top img-fluid' [src]='heroe.img' [alt]='heroe.nombre'>
     <div class='card-block'>
       <h4 class='card-title'>{{ heroe.nombre }}</h4>

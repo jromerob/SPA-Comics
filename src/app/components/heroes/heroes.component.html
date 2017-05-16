@@ -1,9 +1,9 @@
 <h1>Heroes <small>varios</small></h1>
 
   <div class='card-columns'>
-    <div class='card animated fadein fast' *ngFor='let heroe of heroes; let i=index'>
+    <div class='card animated fadeIn fast' *ngFor='let heroe of heroes; let i=index'>
     <img class='card-img-top img-fluid' [src]='heroe.img' [alt]='heroe.nombre'>
-    <div class='card-block'>
+    <div class='card-block animated fadeIn'>
       <h4 class='card-title'>{{ heroe.nombre }}</h4>
       <p class='card-text'>{{ heroe.bio }}</p>
       <p class='card-text'><small class='text-muted'>{{ heroe.aparicion }}</small></p>
